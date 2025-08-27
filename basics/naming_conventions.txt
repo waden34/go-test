@@ -1,0 +1,33 @@
+package main
+
+import "fmt"
+
+type Employee struct {
+	FirstName string
+	LastName  string
+	Age       int
+}
+
+func main() {
+	// Pascal Case
+	// Eg. CalculateArea, UserInfo, NewHTTPRequest
+	// Structs, interfaces, enums
+
+	// snake_case
+	// Eg. user_id, first_name, http_request
+	// filenames
+
+	// UPPERCASE
+	// Use case is Constants
+
+	// Mixed Case
+	// Eg. javaScript, htmlDocument, isValid
+
+	// Package names should be short, no _ and all lowercase
+
+	const MAXRETRIES = 5
+
+	var employeeID = 1001
+	fmt.Println("Employee ID: ", employeeID)
+
+}
