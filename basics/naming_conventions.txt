@@ -14,7 +14,7 @@ func main() {
 	// Structs, interfaces, enums
 
 	// snake_case
-	// Eg. user_id, first_name, http_request
+	// E.g. user_id, first_name, http_request
 	// filenames
 
 	// UPPERCASE
