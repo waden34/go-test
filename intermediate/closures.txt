@@ -31,12 +31,12 @@ func main() {
 	fmt.Println(subtracter(6))
 }
 
-func adder() func() int {
-	i := 0
-	fmt.Println("previous value of i:", i)
-	return func() int { // Anonymous function that is set to the sequence variable above. Lines above are only called in the initial adder() call
-		i++
-		fmt.Println("added 1 to i:", i)
-		return i
-	}
-}
+//func adder() func() int {
+//	i := 0
+//	fmt.Println("previous value of i:", i)
+//	return func() int { // Anonymous function that is set to the sequence variable above. Lines above are only called in the initial adder() call
+//		i++
+//		fmt.Println("added 1 to i:", i)
+//		return i
+//	}
+//}
