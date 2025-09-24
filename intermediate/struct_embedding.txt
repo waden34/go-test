@@ -1,0 +1,39 @@
+package main
+
+import "fmt"
+
+type person struct {
+	name string
+	age  int
+}
+
+type Employee struct {
+	person     // Embedded struct
+	EmployeeId string
+	salary     float64
+}
+
+func (p person) introduce() {
+	fmt.Printf("Hi i am %s, and I am %d years old", p.name, p.age)
+}
+
+func (e Employee) introduce() { // Overloads the person.introduce method
+	fmt.Printf("I'm %s, my employee ID is %s, and I earn %.2f\n", e.name, e.EmployeeId, e.salary)
+}
+func main() {
+	employee := Employee{
+		person: person{
+			name: "John",
+			age:  30,
+		},
+		EmployeeId: "3001",
+		salary:     50000,
+	}
+
+	fmt.Println(employee.name) // Embedded anonymous struct passes fields to outer struct. If it was named, the fields aren't promoted.
+	fmt.Println(employee.age)
+	fmt.Println(employee.EmployeeId)
+	fmt.Println(employee.salary)
+
+	employee.introduce() // Embedded method is in person struct, can use in outer struct
+}
